@@ -1,4 +1,4 @@
-"use client";
+ "use client";
 
 import { useEffect, useState } from "react";
 import { useParams } from "next/navigation";
@@ -709,8 +709,6 @@ export default function DashboardPage() {
               title="Avg. Support"
               value={`${data.summary.avgContribution.toLocaleString()} ${getDominantAssetCode(assetBreakdown)}`}
               icon={<TrendingUp className="text-gold" />}
-              trend="—"
-              positive={true}
             />
             <StatCard
               title="Active Drips"
