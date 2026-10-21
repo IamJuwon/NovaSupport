@@ -657,7 +657,7 @@ export default function DashboardPage() {
                     type="button"
                     onClick={handleResendVerification}
                     disabled={resendingVerification}
-                    className="inline-flex min-h-[36px] items-center justify-center rounded-xl border border-yellow-500/40 bg-yellow-500/10 px-4 py-1.5 text-xs font-bold text-yellow-300 transition hover:bg-yellow-500/20 disabled:cursor-not-allowed disabled:opacity-60 shrink-0"
+                    className="inline-flex min-h-[36px] items-center justify-center rounded-xl border border-yellow-500/40 bg-yellow-500/10 px-4 py-1.5 text-xs font-bold text-yellow-300 transition hover:bg-yellow-500/20 disabled:opacity-60 disabled:cursor-not-allowed"
                   >
                     {resendingVerification ? (
                       <span className="flex items-center gap-2">
@@ -707,7 +707,7 @@ export default function DashboardPage() {
             />
             <StatCard
               title="Avg. Support"
-              value={`${data.summary.avgContribution} ${getDominantAssetCode(assetBreakdown)}`}
+              value={`${data.summary.avgContribution.toLocaleString()} ${getDominantAssetCode(assetBreakdown)}`}
               icon={<TrendingUp className="text-gold" />}
               trend="—"
               positive={true}
@@ -922,7 +922,7 @@ export default function DashboardPage() {
                   type="button"
                   onClick={handleDownloadCsv}
                   disabled={csvLoading}
-                  className="inline-flex min-h-[44px] items-center justify-center rounded-xl border border-mint/30 bg-mint/10 px-4 py-2 text-xs font-bold text-mint transition hover:bg-mint/20 disabled:cursor-not-allowed disabled:opacity-60"
+                  className="inline-flex min-h-[44px] items-center justify-center rounded-xl border border-mint/30 bg-mint/10 px-4 py-2 text-xs font-bold text-mint transition hover:bg-mint/20 disabled:opacity-60 disabled:cursor-not-allowed"
                 >
                   {csvLoading ? (
                     <span className="flex items-center gap-2">
